@@ -33,7 +33,7 @@ st.sidebar.image("https://cdn-icons-png.flaticon.com/512/2422/2422183.png", widt
 st.sidebar.header("Terminal Controls")
 
 # Upgraded to accept full company names
-user_input = st.sidebar.text_input("Target Asset (Name or Ticker)", "Apple")
+user_input = st.sidebar.text_input("Target Asset (Name or Ticker)", "AAPL")
 
 st.sidebar.subheader("Backtest Parameters")
 history_years = st.sidebar.slider("Historical Data Range (Years)", 1, 10, 5)
@@ -115,8 +115,7 @@ if not data.empty:
                 height=600, template="plotly_dark", margin=dict(l=0, r=0, t=30, b=0),
                 xaxis_rangeslider_visible=False, legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
             )
-            st.plotly_chart(fig, use_container_width=True)
-
+            st.plotly_chart(fig, use_container_width=True, config={'displayModeBar': False})
         # --- TAB 2: THE PREDICTION MODEL ---
         with tab2:
             st.subheader("Quantitative Growth Projection")

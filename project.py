@@ -33,7 +33,7 @@ st.sidebar.image("https://cdn-icons-png.flaticon.com/512/2422/2422183.png", widt
 st.sidebar.header("Terminal Controls")
 
 # Upgraded to accept full company names
-user_input = st.sidebar.text_input("Target Asset (Name or Ticker)", "AAPL")
+user_input = st.sidebar.text_input("Target Asset (Name or Ticker)", "Honda")
 
 st.sidebar.subheader("Backtest Parameters")
 history_years = st.sidebar.slider("Historical Data Range (Years)", 1, 10, 5)
